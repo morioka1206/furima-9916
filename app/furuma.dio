@@ -1,0 +1,18 @@
+<mxfile host="65bd71144e" modified="2021-02-26T05:30:31.923Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" version="14.2.4" etag="QlFWNmgqbd0sQUIr3kKL" type="embed" pages="2">
+    <diagram id="zTFMQp35FuRi10QcQsyu" name="ページ1">
+        <mxGraphModel dx="968" dy="712" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="qB6FYsz9t4Dllf69gDvB" name="ページ2">
+        <mxGraphModel dx="968" dy="712" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="uI6wm4Nb43qGB-f-Fg54-0"/>
+                <mxCell id="uI6wm4Nb43qGB-f-Fg54-1" parent="uI6wm4Nb43qGB-f-Fg54-0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
