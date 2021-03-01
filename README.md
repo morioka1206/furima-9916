@@ -57,8 +57,8 @@ belongs_to :purchase_record
   
 |comlum               | type         |Option                |
 |---------------------|--------------|----------------------|
-|user_id              |reference     |foreing_key: true     |
-|item_id              |reference     |foreing_key: true     |
+|user                 |reference     |foreing_key: true     |
+|item                 |reference     |foreing_key: true     |
 
 has_one :customer_infomation
 belongs_to :user
