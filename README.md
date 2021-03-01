@@ -31,7 +31,7 @@ has_many  :purchase_records
 |shipping_day_id      |integer       |ActiveHash            |
 |conditon_id          |integer       |ActiveHash            |
 |price                |integer       |null: false           |
-|user_id              |reference     |foreign_key: true     |
+|user                 |references    |foreign_key: true     |
 
 belongs_to :user
 has_one    :parchase_record
@@ -48,7 +48,7 @@ has_one    :parchase_record
 |address_line         |string        |null: false           |
 |building_name        |string        |                      |
 |phone_number         |string        |null: false           |
-|purchase_record      |reference     |foreign_key_true      |
+|purchase_record      |references    |foreign_key_true      |
 
 belongs_to :purchase_record
 
@@ -57,8 +57,8 @@ belongs_to :purchase_record
   
 |comlum               | type         |Option                |
 |---------------------|--------------|----------------------|
-|user                 |reference     |foreing_key: true     |
-|item                 |reference     |foreing_key: true     |
+|user                 |references    |foreing_key: true     |
+|item                 |references    |foreing_key: true     |
 
 has_one :customer_infomation
 belongs_to :user
