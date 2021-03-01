@@ -31,10 +31,9 @@ has_many  :purchase_records
 |shipping_day_id      |integer       |ActiveHash            |
 |conditon_id          |integer       |ActiveHash            |
 |price                |integer       |null: false           |
-
+|user_id              |reference     |foreign_key: true     |
 
 belongs_to :user
-has_one    :customer_infomation
 has_one    :parchase_record
 
 ## Customer_infomationテーブル
@@ -49,20 +48,20 @@ has_one    :parchase_record
 |address_line         |string        |null: false           |
 |building_name        |string        |                      |
 |phone_number         |string        |null: false           |
-
+|purchase_record      |reference     |foreign_key_true      |
 
 belongs_to :purchase_record
-belongs_to :user
 
   
 ## Purchase_recordテーブル
   
 |comlum               | type         |Option                |
 |---------------------|--------------|----------------------|
-|                     |              |                      |
-|                     |              |                      |
+|user_id              |reference     |foreing_key: true     |
+|item_id              |reference     |foreing_key: true     |
 
 has_one :customer_infomation
 belongs_to :user
+belongs_to :item
 
 

@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2021-03-01T02:10:46.258Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" version="14.2.4" etag="RRSFUDMsGzJlTFnFu673" type="embed" pages="2">
+<mxfile host="65bd71144e" modified="2021-03-01T02:11:57.202Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" version="14.2.4" etag="FdZnwjVwGRO2jPp7iu_F" type="embed" pages="2">
     <diagram id="zTFMQp35FuRi10QcQsyu" name="ページ1">
         <mxGraphModel dx="4026" dy="1396" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -13,7 +13,7 @@
                 <mxCell id="Ec4hbsaTH_HuRINt8xO2-210" value="Customer_infomationテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;sketch=1;" vertex="1" parent="1">
                     <mxGeometry x="-1590" y="410" width="540" height="210" as="geometry"/>
                 </mxCell>
-                <mxCell id="Ec4hbsaTH_HuRINt8xO2-211" value="+postal_code（郵便番号）{integer型、NOT NULL}&#10;+state_id（都道府県)　Active Hashを使う&#10;+city（市区町村）{string型、NOT NULL}&#10;+address_line(番地）{string型、NOT NULL}&#10;+building_name（建物名）{string型、NOT NULL}&#10;+phone_number（電話番号）{stringr型、NOT NULL}&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=17;verticalAlign=top;resizable=0;rotatable=0;part=1;sketch=1;" vertex="1" parent="Ec4hbsaTH_HuRINt8xO2-210">
+                <mxCell id="Ec4hbsaTH_HuRINt8xO2-211" value="+postal_code（郵便番号）{string型、NOT NULL}&#10;+state_id（都道府県)　Active Hashを使う&#10;+city（市区町村）{string型、NOT NULL}&#10;+address_line(番地）{string型、NOT NULL}&#10;+building_name（建物名）{string型、NOT NULL}&#10;+phone_number（電話番号）{stringr型、NOT NULL}&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=17;verticalAlign=top;resizable=0;rotatable=0;part=1;sketch=1;" vertex="1" parent="Ec4hbsaTH_HuRINt8xO2-210">
                     <mxGeometry y="30" width="540" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="Ec4hbsaTH_HuRINt8xO2-212" value="Itemsテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;sketch=1;" vertex="1" parent="1">
