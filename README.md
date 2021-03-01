@@ -36,7 +36,7 @@ has_many  :purchase_records
 belongs_to :user
 has_one    :parchase_record
 
-## Customer_infomationテーブル
+## Customer_infomationsテーブル
 　
 　 
 
@@ -53,7 +53,7 @@ has_one    :parchase_record
 belongs_to :purchase_record
 
   
-## Purchase_recordテーブル
+## Purchase_recordsテーブル
   
 |comlum               | type         |Option                |
 |---------------------|--------------|----------------------|
