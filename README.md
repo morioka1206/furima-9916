@@ -2,16 +2,16 @@
 
 ## Usersテーブル
 
-|comlum               | type         |Option      |
-|---------------------|--------------|------------|
-|nickname             |string        |null: false |
-|email                |string        |unique: true|
-|encyrpted_password   |string        |null: false |
-|family_name          |string        |null: false |
-|first_name           |string        |null: false |
-|family_name_kana     |string        |null: false |
-|first_name_kana      |string        |null: false |
-|birthday             |date          |null: false |
+|comlum               | type         |Option                  |
+|---------------------|--------------|------------------------|
+|nickname             |string        |null: false             |
+|email                |string        |unique: true, null:false|
+|encyrpted_password   |string        |null: false             |
+|family_name          |string        |null: false             |
+|first_name           |string        |null: false             |
+|family_name_kana     |string        |null: false             |
+|first_name_kana      |string        |null: false             |
+|birthday             |date          |null: false             |
 
 has_many  :items
 has_many  :purchase_records
@@ -31,30 +31,27 @@ has_many  :purchase_records
 |shipping_day_id      |integer       |ActiveHash            |
 |conditon_id          |integer       |ActiveHash            |
 |price                |integer       |null: false           |
-|user_id              |reference     |foreign_key: true     |
 
 
 belongs_to :user
-has_one    :customer
+has_one    :customer_infomation
 has_one    :parchase_record
 
-## Customerテーブル
+## Customer_infomationテーブル
 　
 　 
 
 |comlum               | type         |Option                |
 |---------------------|--------------|----------------------|
-|postal_code          |integer       |null: false           |
+|postal_code          |string        |null: false           |
 |state_id             |integer       |ActiveHash            |
 |city                 |string        |null: false           |
 |address_line         |string        |null: false           |
 |building_name        |string        |                      |
 |phone_number         |string        |null: false           |
-|item_id              |reference     |foreign_key: true     |
-|user_id              |reference     |foreing_key: true     |
 
 
-belongs_to :item
+belongs_to :purchase_record
 belongs_to :user
 
   
@@ -62,11 +59,10 @@ belongs_to :user
   
 |comlum               | type         |Option                |
 |---------------------|--------------|----------------------|
-|user_id              |reference     |foreing_key: true     |
-|item_id              |reference     |foreing_key: true     |
+|                     |              |                      |
+|                     |              |                      |
 
+has_one :customer_infomation
 belongs_to :user
-belogns_to :item
-
 
 
