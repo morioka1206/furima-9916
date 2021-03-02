@@ -1,7 +1,14 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
+  Rspec.desribe User, type: :model do
+    describe "ユーザー新規登録" do
+      
+    end
+    
+  end
+  
+  end
   #   assert true
   # end
 end

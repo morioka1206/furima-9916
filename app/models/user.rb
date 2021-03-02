@@ -9,13 +9,12 @@ class User < ApplicationRecord
     validates :first_name
   end
 
-  with_options presence: true , format: { with: /\A[ァ-ヶー－]+\z/, message: "全角（カタカナ）での入力が必須" }  do
+  with_options presence: true , format: { with: /\A[ァ-ヶー－]+\z/, message: "全角（カタカナ）での入力が必須" } do
     validates :family_name_kana
     validates :first_name_kana
   end
 
+  validates :nickname, presence: true
   validates :birthday, presence: true
-
-  
-  
+  validates :password, presence: true, format: {with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, message: "Include both letters and numbers"}
 end
