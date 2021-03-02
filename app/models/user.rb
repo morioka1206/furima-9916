@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   with_options presence: true do
-    validates :nickname, presence: true
-    validates :birthday, presence: true
+    validates :nickname
+    validates :birthday
 
     with_options format: { with: /\A[ぁ-んァ-ヶ一-龥々]+\z/, message: "全角（漢字・ひらがな・カタカナ）での入力が必須" } do
     validates :family_name
