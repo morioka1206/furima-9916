@@ -86,7 +86,32 @@ RSpec.describe User, type: :model do
       it "名前カナが空では登録できない" do
         @user.first_name_kana = ""
         @user.valid?
-        expect(@user.errors.full_messages).to include("First name kana can't be blank")  
+        expect(@user.errors.full_messages).to include("First name kana can't be blank")
+      end
+      it "苗字が漢字・平仮名・カタカナ以外では登録できないこと" do
+        @user.family_name = "monomono"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Family name 全角（漢字・ひらがな・カタカナ）での入力が必須") 
+      end
+      it "名前が漢字・平仮名・カタカナ以外では登録できないこと" do
+        @user.first_name = "katakata"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("First name 全角（漢字・ひらがな・カタカナ）での入力が必須")
+      end
+      it "苗字カナが全角カタカナ以外では登録できないこと" do
+        @user.family_name_kana = "ﾔﾏﾀﾞ"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Family name kana 全角（カタカナ）での入力が必須")
+      end
+      it "名前カナが全角カタカナ以外では登録できないこと" do
+        @user.first_name_kana = "ﾀﾛｳ"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("First name kana 全角（カタカナ）での入力が必須")
+      end
+      it "生年月日が空では登録できない" do
+        @user.birthday = ""
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Birthday can't be blank")  
       end
     end
   end  
