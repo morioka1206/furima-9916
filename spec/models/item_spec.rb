@@ -29,13 +29,28 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Price can't be blank")
       end
-      it "販売価格が３００円未満、１０００万だと出品できない"  do
-        @item.price = 200 || 100000000
+      it "販売価格が３００円未満だと出品できない"  do
+        @item.price = 200
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price 販売価格は、300円から9,999,999円まで")
+      end
+      it "販売価格が１０００万円以上だと出品できない"  do
+        @item.price = 100000000
         @item.valid?
         expect(@item.errors.full_messages).to include("Price 販売価格は、300円から9,999,999円まで")
       end
       it "販売価格は半角数字以外では出品できない"  do
         @item.price = "aaaaaa"
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price 販売価格は半角数字のみ")
+      end
+      it "販売価格は全角文字では出品できない"  do
+        @item.price = "２０００"
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price 販売価格は半角数字のみ")
+      end
+      it "販売価格は半角英数字混合では出品できない"  do
+        @item.price = "aa3000"
         @item.valid?
         expect(@item.errors.full_messages).to include("Price 販売価格は半角数字のみ")
       end
