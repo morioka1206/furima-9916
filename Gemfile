@@ -42,10 +42,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rubocop', require: false
   # エラー画面をわかりやすく整形してくれる
-  gem 'better_errors'
+  # gem 'better_errors'
 
   # better_errorsの画面上にirb/pry(PERL)を表示する
-  gem 'binding_of_caller'
+  # gem 'binding_of_caller'
 end
 
 group :test do
@@ -58,3 +58,14 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+<<<<<<< Updated upstream
+=======
+gem 'devise'
+gem 'pry-rails'
+gem 'rspec-rails', '~> 4.0.0'
+gem 'factory_bot_rails'
+gem 'faker'
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
+gem 'active_hash'
+>>>>>>> Stashed changes
