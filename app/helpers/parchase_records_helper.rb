@@ -1,0 +1,2 @@
+module ParchaseRecordsHelper
+end
