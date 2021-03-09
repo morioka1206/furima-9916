@@ -10,5 +10,9 @@ FactoryBot.define do
     shipping_cost_id { 3 }
     shipping_day_id  { 3 }
     condition_id     { 3 }
+    
+    after(:build) do |item|
+      item.image.attach(io: File.open('public/images/2.jpg'), filename: '2.jpg')
+    end
   end
 end

@@ -7,10 +7,6 @@ class OrdersController < ApplicationController
   def index
     @customer_record = CustomerinfomationPurchaserecord.new
   end
-
-  def new
-    @customer_record = CustomerinfomationPurchaserecord.new
-  end
   
 
   def create
