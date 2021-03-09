@@ -41,7 +41,7 @@ class OrdersController < ApplicationController
 
 
   def sold_out
-    if @item.purchase_records.present? || @item.user_id == current_user.id
+    if @item.purchase_record.present? || @item.user_id == current_user.id
       redirect_to root_path
     end
   end

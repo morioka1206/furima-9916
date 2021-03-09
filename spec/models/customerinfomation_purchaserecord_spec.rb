@@ -11,6 +11,10 @@ RSpec.describe CustomerinfomationPurchaserecord, type: :model do
       it 'すべての値が正しく入力されていれば購入できること' do
         expect(@customer_record).to be_valid
       end
+      it 'building_nameは空でも購入できること' do
+        @customer_record.building_name = ""
+        expect(@customer_record).to be_valid
+      end
     end
     
     context "商品が購入できないとき" do
@@ -53,10 +57,6 @@ RSpec.describe CustomerinfomationPurchaserecord, type: :model do
         @customer_record.address_line = ""
         @customer_record.valid?
         expect(@customer_record.errors.full_messages).to include("Address line can't be blank") 
-      end
-      it 'building_nameは空でも購入できること' do
-        @customer_record.building_name = ""
-        expect(@customer_record).to be_valid
       end
       it 'phone_numberが空だと購入できないこと' do
         @customer_record.phone_number = ""

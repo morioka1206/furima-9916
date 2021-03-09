@@ -1,13 +1,13 @@
 class Item < ApplicationRecord
   belongs_to :user
   has_one_attached :image
+  has_one :purchase_record
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
   belongs_to :state
   belongs_to :shipping_cost
   belongs_to :shipping_day
   belongs_to :condition
-  has_many :purchase_records
 
   with_options presence: true do
     validates :image

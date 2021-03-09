@@ -6,7 +6,7 @@ FactoryBot.define do
     state_id {8}
     city {"中野区"}
     address_line {"4丁目2-3"}
-    building_name {""}
+    building_name {"テックビル"}
     phone_number {"09012345678"}
 
     token {"tok_abcdefghijk00000000000000000"}
