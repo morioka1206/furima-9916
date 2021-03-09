@@ -1,6 +1,8 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
   before_action :item_param, only: [:index, :create]
+  before_action :sold_out  
+  
 
   def index
     @customer_record = CustomerinfomationPurchaserecord.new
@@ -39,6 +41,12 @@ class OrdersController < ApplicationController
         card: customer_params[:token],    # カードトークン
         currency: 'jpy'                 # 通貨の種類（日本円）
       )
+  end
+
+  def sold_out
+    if @item.purchase_records.present?
+      redirect_to root_path
+    end
   end
 
 end
