@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index ,:show]
   before_action :item_param, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, except: [:index, :show, :new, :create]
-  before_action :sold_out, except: [:index, :show, :new]
+  before_action :sold_out, except: [:index, :show, :new, :create]
 
   def index
     @items = Item.order(id: "DESC")
@@ -14,6 +14,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    
     if @item.save
       redirect_to root_path
     else
