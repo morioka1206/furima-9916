@@ -1,4 +1,4 @@
-class ParchaseRecordsController < ApplicationController
+class PurchaseRecordsController < ApplicationController
   def index
   end
 end
